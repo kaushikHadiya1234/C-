@@ -7,7 +7,7 @@ class Math
 	
 		int no;
 		
-		virtual void data();	
+		virtual void data=0();	
 };
 class Math1 : public Math
 {
