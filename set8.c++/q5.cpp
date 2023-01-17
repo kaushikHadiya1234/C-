@@ -8,30 +8,18 @@ class Shape
 		float redius,base,hight,area=0;
 		const float pi=3.14;
 		
-		void setdata()
-		{
-			cout<<"* Find Area of Circle * "<<endl;
-			
-			cout<<"enter the value of Redius :"<<endl;
-			cin>>redius;
-		}
-		void setdata1()
-		{
-			cout<<"* Find Area of Triangle * "<<endl;
-				
-			cout<<"enter the value of Base :"<<endl;
-			cin>>base;
-			cout<<"enter the value of Hight :"<<endl;
-			cin>>hight;			
-		}	
+		virtual void getArea()=0;
 };
-class Circle : public Shape
+class Circle : public Shape 
 {
 	public : 
 	
 	void getArea()
 	{
-		setdata();
+		cout<<"* Find Area of Circle *\n\n "<<endl;
+		
+		cout<<"enter the value of Redius =>>";
+		cin>>redius;
 		
 		area=pi*redius*redius;
 		
@@ -43,7 +31,12 @@ class Triangle : public Shape
 	public :
 	void getArea()
 	{
-		setdata1();
+	    cout<<"\n\n* Find Area of Triangle *\n\n "<<endl;
+				
+		cout<<"enter the value of Base =>>";
+		cin>>base;
+		cout<<"enter the value of Hight =>>";
+		cin>>hight;
 			
 		area=base*hight/2;
 		
@@ -52,10 +45,18 @@ class Triangle : public Shape
 };
 main()
 {
-	
+	Shape *s,*s1;
 	Circle c1;
-	c1.Circle::getArea();
+	
+	s=&c1;
+	
+	s->getArea();
 	
 	Triangle t1;
-	t1.Triangle::getArea();
+	
+	s1=&t1;
+	
+	s1->getArea();
+	
+	
 }
