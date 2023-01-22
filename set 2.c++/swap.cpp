@@ -44,7 +44,7 @@ void swap()
 		cout<<a[i]<<endl;
 	} 
 	
-	cout<<"\n=========AFTER SWAPING A=========\n";
+	cout<<"\n=========AFTER SWAPING B=========\n";
 		
 	  for(i=0;i<n;i++)
 	{
