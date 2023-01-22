@@ -16,7 +16,7 @@ class College
 	{
 		cout<<"sum is :"<<a+b<<endl;
 	}
-	College(College &c4)
+	College(College &c1)
 	{
 		cout<<"FLUTTER DEVELOPER...."<<endl;
 	}
